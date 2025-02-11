@@ -6,7 +6,8 @@
     --text: #ffffff;
     --nav-bg: rgb(18, 17, 17);
     --card-bg: rgba(26, 26, 47, 0.8);
-    --section-bg: rgb(15, 14, 14);
+    --section-bg: black;
+    
 }
 
 :root[data-theme="light"] {
