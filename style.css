@@ -1,0 +1,491 @@
+:root[data-theme="dark"] {
+    --primary: #3a0ca3;
+    --secondary: #4cc9f0;
+    --accent: #702b9e;
+    --background: #0a0a1f;
+    --text: #ffffff;
+    --nav-bg: rgb(18, 17, 17);
+    --card-bg: rgba(26, 26, 47, 0.8);
+    --section-bg: black;
+}
+
+:root[data-theme="light"] {
+    --primary: #3a0ca3;
+    --secondary: #4cc9f0;
+    --accent: #702b9e;
+    --background: #ffffff;
+    --text: #000000;
+    --nav-bg: #f5f5f5;
+    --card-bg: rgba(245, 245, 245, 0.9);
+    --section-bg: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    background: rgb(29, 28, 28);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    transition-delay: color 2s;
+
+
+}
+
+.nav-links a:hover {
+    color: var(--secondary);
+    
+    transition:color 0.5s;
+    transition:cubic-bezier(0.39, 0.575, 0.565, 1);
+    
+
+}
+
+.hero {
+    height:750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: black;
+    
+    
+
+}
+
+
+.hero-content {
+    max-width: 700px;
+    position: relative;
+    top: 60px;
+
+
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--secondary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px var(--secondary);
+    }
+    to {
+        text-shadow: 0 0 20px var(--accent);
+    }
+}
+
+.hero p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    background: var(--secondary);
+    color: var(--background);
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    position: relative;
+    right: 7px;
+
+
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px var(--secondary);
+}
+.about {
+    height: 550px;
+    width: 100%;
+    background-color: black;
+    padding: 40px 0;
+}
+
+.about-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0 20px;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    
+    
+}
+
+.about-content {
+    flex: 1;
+    font-size: 40px;
+
+}
+
+#aboutus {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+#who {
+    font-size: 27px;
+    margin-bottom: 20px;
+    color: rgb(123, 48, 188);
+}
+#theme-toggle{
+    height: 10px;
+    width: 10px;
+    position: relative;
+    
+    top: 3px;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 15px;
+    font-size: 20px;
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        margin-bottom: 30px;
+    }
+
+    .about {
+        height: auto;
+        min-height: 600px;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+.quantum-sphere {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, var(--secondary), transparent);
+    animation: orbit 20s linear infinite;
+    opacity: 0.1;
+}
+
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}
+/* Add these new styles to your existing CSS file while keeping all original styles */
+
+/* Theme Variables */
+[data-theme="light"] {
+    --primary: #3a0ca3;
+    --secondary: #4cc9f0;
+    --accent: #702b9e;
+    --background: #ffffff;
+    --text: #0a0a1f;
+    --card-bg: #f0f0f0;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--secondary);
+}
+
+/* Initiatives Section */
+.initiatives {
+    min-height: 500px;
+    width: 100%;
+    background-color: black;
+    padding: 60px 0;
+    height: 600px;
+
+    
+}
+
+.initiatives-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.initiatives h1 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: white;
+}
+
+.carousel-wrapper {
+    position: relative;
+    padding: 0 50px;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    padding: 2rem;
+    background: rgba(26, 26, 47, 0.8);
+    border-radius: 15px;
+    margin: 0 15px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(76, 201, 240, 0.1);
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item i {
+    font-size: 3rem;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+}
+
+.carousel-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+    background: linear-gradient(45deg, var(--secondary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.carousel-item p {
+    color: var(--text);
+    line-height: 1.6;
+    text-align: center;
+    max-width: 80%;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(76, 201, 240, 0.1);
+    border: 1px solid rgba(76, 201, 240, 0.2);
+    color: var(--text);
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    z-index: 2;
+}
+
+.carousel-button:hover {
+    background: var(--secondary);
+    color: var(--background);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Responsive Design for Initiatives */
+@media (max-width: 768px) {
+    .initiatives {
+        padding: 40px 0;
+    }
+
+    .carousel-item {
+        padding: 1.5rem;
+    }
+
+    .carousel-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-item p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-button {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}
+body {
+    background: var(--background);
+    color: var(--text);
+    color: black;
+
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav {
+    background: var(--nav-bg);
+    transition: background-color 0.3s;
+}
+
+.nav-links a {
+    color: var(--text);
+}
+
+.hero, .about, .initiatives {
+    background-color: var(--section-bg);
+    color: var(--text);
+    transition: background-color 0.3s;
+    
+
+}
+
+.about-content p, #aboutus {
+    color: var(--text);
+}
+
+.carousel-item {
+    background: var(--card-bg);
+    border: 1px solid var(--secondary);
+}
+
+.carousel-item p {
+    color: var(--text);
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    color: var(--secondary);
+}
+#inin{
+    color: var(--text);
+}
+
+
+
+
+
+
+
