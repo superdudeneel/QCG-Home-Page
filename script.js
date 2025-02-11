@@ -51,12 +51,12 @@ const themeToggle = document.getElementById('theme-toggle');
             updateCarousel();
         }, 5000);
 
-// Add this to your JavaScript file
+
 document.addEventListener('DOMContentLoaded', function() {
     const canvas = document.getElementById('quantum-canvas');
     const ctx = canvas.getContext('2d');
     
-    // Set canvas size
+ 
     function resizeCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     
-    // Particle class
+    
     class Particle {
         constructor() {
             this.reset();
